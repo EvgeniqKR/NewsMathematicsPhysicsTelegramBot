@@ -1,0 +1,19 @@
+2024-01-06 02:24:45 DEBUG UpdateProducerImpl:16 - Привет
+2024-01-06 02:25:12 DEBUG UpdateProducerImpl:16 - /start
+2024-01-06 02:25:20 DEBUG UpdateProducerImpl:16 - Hello
+2024-01-06 02:25:29 DEBUG UpdateProducerImpl:16 - /start
+2024-01-06 02:26:58 DEBUG UpdateProducerImpl:16 - /start
+2024-01-06 02:30:30 DEBUG UpdateProducerImpl:16 - 
+2024-01-06 02:33:23 DEBUG UpdateProducerImpl:16 - Hello
+2024-01-06 02:33:46 DEBUG UpdateProducerImpl:16 - Hello 22
+2024-01-06 02:33:56 ERROR UpdateController:40 - Unsupported message type is received: Update(updateId=170826081, message=null, inlineQuery=null, chosenInlineQuery=null, callbackQuery=null, editedMessage=Message(messageId=7, from=User(id=600858154, firstName=Евгений, isBot=false, lastName=Красильников, userName=EvgeniyKrasil, languageCode=ru, canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null, isPremium=null, addedToAttachmentMenu=null), date=1704497626, chat=Chat(id=600858154, type=private, title=null, firstName=Евгений, lastName=Красильников, userName=EvgeniyKrasil, photo=null, description=null, inviteLink=null, pinnedMessage=null, stickerSetName=null, canSetStickerSet=null, permissions=null, slowModeDelay=null, bio=null, linkedChatId=null, location=null, messageAutoDeleteTime=null, hasPrivateForwards=null, HasProtectedContent=null, joinToSendMessages=null, joinByRequest=null), forwardFrom=null, forwardFromChat=null, forwardDate=null, text=Hello 2223, entities=null, captionEntities=null, audio=null, document=null, photo=null, sticker=null, video=null, contact=null, location=null, venue=null, animation=null, pinnedMessage=null, newChatMembers=[], leftChatMember=null, newChatTitle=null, newChatPhoto=null, deleteChatPhoto=null, groupchatCreated=null, replyToMessage=null, voice=null, caption=null, superGroupCreated=null, channelChatCreated=null, migrateToChatId=null, migrateFromChatId=null, editDate=1704497635, game=null, forwardFromMessageId=null, invoice=null, successfulPayment=null, videoNote=null, authorSignature=null, forwardSignature=null, mediaGroupId=null, connectedWebsite=null, passportData=null, forwardSenderName=null, poll=null, replyMarkup=null, dice=null, viaBot=null, senderChat=null, proximityAlertTriggered=null, messageAutoDeleteTimerChanged=null, isAutomaticForward=null, hasProtectedContent=null, webAppData=null, videoChatStarted=null, videoChatEnded=null, videoChatParticipantsInvited=null, videoChatScheduled=null), channelPost=null, editedChannelPost=null, shippingQuery=null, preCheckoutQuery=null, poll=null, pollAnswer=null, myChatMember=null, chatMember=null, chatJoinRequest=null)
+2024-01-06 02:34:14 DEBUG UpdateProducerImpl:16 - 
+2024-01-06 02:34:27 DEBUG UpdateProducerImpl:16 - 
+2024-01-06 02:37:12 DEBUG UpdateProducerImpl:16 - 
+2024-01-06 02:37:17 DEBUG UpdateProducerImpl:16 - 
+2024-01-06 02:37:22 DEBUG UpdateProducerImpl:16 - 
+2024-01-06 02:37:26 DEBUG UpdateProducerImpl:16 - 
+2024-01-06 02:37:51 DEBUG UpdateProducerImpl:16 - Hello
+2024-01-06 02:40:19 DEBUG UpdateProducerImpl:15 - 
+2024-01-06 02:40:24 DEBUG UpdateProducerImpl:15 - 
+2024-01-06 02:41:04 DEBUG UpdateProducerImpl:15 - 

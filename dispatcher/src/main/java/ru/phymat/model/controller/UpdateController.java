@@ -4,17 +4,18 @@ import lombok.extern.log4j.Log4j;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
+import ru.phymat.model.RabbitQueue;
 import ru.phymat.model.service.UpdateProducer;
 import ru.phymat.model.util.MessageUtils;
 
-
-import static ru.phymat.model.RabbitQueue.*;
 
 @Component
 @Log4j
 public class UpdateController {
     private TelegramBot telegramBot;
     private final MessageUtils messageUtils;
+
+
     private final UpdateProducer updateProducer;
 
     public UpdateController(MessageUtils messageUtils, UpdateProducer updateProducer) {
@@ -54,13 +55,11 @@ public class UpdateController {
     }
 
     private void setUnsupportedMessageTypeView(Update update) {
-        var sendMessage = MessageUtils.generateSendMessageWithText(update,
-                "Неподдерживающийся тип сообщения!");
+        var sendMessage = messageUtils.generateSendMessageWithText(update, "Неподдерживающийся тип сообщения!");
         setView(sendMessage);
     }
     private void setFileIsReceivedView(Update update) {
-        var sendMessage = MessageUtils.generateSendMessageWithText(update,
-                "Файл получен, обрабатывается!");
+        var sendMessage = messageUtils.generateSendMessageWithText(update, "Файл получен, обрабатывается...");
         setView(sendMessage);
     }
 
@@ -69,15 +68,16 @@ public class UpdateController {
         telegramBot.sendAnswerMessage(sendMessage);
     }
     private void processTextMessage(Update update) {
-        updateProducer.produce(TEXT_MESSAGE_UPDATE, update);
+        updateProducer.produce(RabbitQueue.TEXT_MESSAGE_UPDATE, update);
     }
 
     private void processDocMessage(Update update) {
-        updateProducer.produce(DOC_MESSAGE_UPDATE, update);
+        updateProducer.produce(RabbitQueue.DOC_MESSAGE_UPDATE, update);
+        setFileIsReceivedView(update);
     }
 
     private void processPhotoMessage(Update update) {
-        updateProducer.produce(PHOTO_MESSAGE_UPDATE, update);
+        updateProducer.produce(RabbitQueue.PHOTO_MESSAGE_UPDATE, update);
         setFileIsReceivedView(update);
     }
 }

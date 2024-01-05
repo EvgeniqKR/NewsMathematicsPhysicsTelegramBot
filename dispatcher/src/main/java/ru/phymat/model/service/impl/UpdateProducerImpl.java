@@ -1,7 +1,7 @@
 package ru.phymat.model.service.impl;
 
 import lombok.extern.log4j.Log4j;
-import org.jvnet.hk2.annotations.Service;
+import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import ru.phymat.model.service.UpdateProducer;
 
