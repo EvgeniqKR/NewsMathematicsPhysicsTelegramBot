@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a8839df-76f2-4484-8496-1992dc9c5e39" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/dispatcher.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dispatcher.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +30,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/dispatcher/src/main/java/ru/phymat/model/controller/UpdateController.java" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -54,7 +56,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.DispatcherApplication (1).executor": "Run",
+    "Spring Boot.DispatcherApplication (1).executor": "Debug",
     "Spring Boot.DispatcherApplication.executor": "Run",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "corretto-11 (2)",
@@ -115,8 +117,6 @@
     <attachedChunks>
       <set>
         <option value="jdk-11.0.21-corretto-11.0.21-3183f394aec4-d55de845" />
-        <option value="jdk-17.0.9-corretto-17.0.9-3183f394aec4-8f899f12" />
-        <option value="jdk-20.0.2-corretto-20.0.2.1-3183f394aec4-907a2361" />
         <option value="jdk-21.0.1-openjdk-21.0.1-3183f394aec4-7d648f2c" />
       </set>
     </attachedChunks>
@@ -135,6 +135,7 @@
       <workItem from="1704485155711" duration="4548000" />
       <workItem from="1704498045344" duration="820000" />
       <workItem from="1704503356878" duration="254000" />
+      <workItem from="1704544420031" duration="157000" />
     </task>
     <servers />
   </component>
