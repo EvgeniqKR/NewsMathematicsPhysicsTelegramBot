@@ -1,4 +1,4 @@
-package ru.phymat.model;
+package ru.phymat;
 
 public class RabbitQueue    {
     public static final String DOC_MESSAGE_UPDATE = "doc_message_update";

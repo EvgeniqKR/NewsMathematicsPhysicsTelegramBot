@@ -1,12 +1,12 @@
-package ru.phymat.model.controller;
+package ru.phymat.controller;
 
 import lombok.extern.log4j.Log4j;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
-import ru.phymat.model.RabbitQueue;
-import ru.phymat.model.service.UpdateProducer;
-import ru.phymat.model.util.MessageUtils;
+import ru.phymat.RabbitQueue;
+import ru.phymat.service.UpdateProducer;
+import ru.phymat.util.MessageUtils;
 
 
 @Component

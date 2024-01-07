@@ -1,4 +1,4 @@
-package ru.phymat.model.util;
+package ru.phymat.util;
 
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;

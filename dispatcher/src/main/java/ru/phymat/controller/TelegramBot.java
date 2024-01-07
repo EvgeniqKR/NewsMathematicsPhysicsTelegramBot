@@ -1,4 +1,4 @@
-package ru.phymat.model.controller;
+package ru.phymat.controller;
 
 
 import lombok.extern.log4j.Log4j;

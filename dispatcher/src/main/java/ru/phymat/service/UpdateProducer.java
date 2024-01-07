@@ -1,4 +1,4 @@
-package ru.phymat.model.service;
+package ru.phymat.service;
 
 import org.telegram.telegrambots.meta.api.objects.Update;
 
