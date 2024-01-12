@@ -4,23 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a8839df-76f2-4484-8496-1992dc9c5e39" name="Changes" comment="Deploying RabbitMQ in Docker">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispatcher/src/main/java/ru/phymat/service/impl/AnswerConsumerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/ru/phymat/NodeApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/ru/phymat/configuration/RabbitConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/ru/phymat/service/ConsumerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/ru/phymat/service/ProducerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/ru/phymat/service/impl/ConsumerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/ru/phymat/service/impl/ProducerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="7a8839df-76f2-4484-8496-1992dc9c5e39" name="Changes" comment="We create a Node microservice. Reading messages from&#10;RabbitMQ">
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/ru/phymat/dao/RawDataDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/ru/phymat/entity/RawData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/ru/phymat/service/MainService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/ru/phymat/service/impl/MainServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatcher/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dispatcher/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatcher/src/main/java/ru/phymat/controller/UpdateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatcher/src/main/java/ru/phymat/controller/UpdateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/node/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node/src/main/java/ru/phymat/service/impl/ConsumerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/ru/phymat/service/impl/ConsumerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,9 +50,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/dispatcher/src/main/java/ru/phymat/model/controller/UpdateController.java" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -105,6 +97,11 @@
     "run.configurations.included.in.services": "true",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -171,8 +168,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.DispatcherApplication" />
-        <item itemvalue="Spring Boot.NodeApplication" />
         <item itemvalue="Spring Boot.DispatcherApplication (1)" />
+        <item itemvalue="Spring Boot.NodeApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -204,7 +201,10 @@
       <workItem from="1704545189099" duration="35000" />
       <workItem from="1704545238586" duration="56000" />
       <workItem from="1704639693503" duration="4710000" />
-      <workItem from="1704716549763" duration="3308000" />
+      <workItem from="1704716549763" duration="3513000" />
+      <workItem from="1704929196750" duration="27000" />
+      <workItem from="1704990368819" duration="1651000" />
+      <workItem from="1705015699978" duration="1939000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -246,7 +246,23 @@
       <option name="project" value="LOCAL" />
       <updated>1704644881896</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="We create a Node microservice. Reading messages from&#10;RabbitMQ">
+      <option name="closed" value="true" />
+      <created>1704720033664</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1704720033665</updated>
+    </task>
+    <task id="LOCAL-00007" summary="We create a Node microservice. Reading messages from&#10;RabbitMQ">
+      <option name="closed" value="true" />
+      <created>1704720059768</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1704720059768</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,19 +282,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update" />
     <MESSAGE value="Deploying RabbitMQ in Docker" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deploying RabbitMQ in Docker" />
+    <MESSAGE value="We create a Node microservice. Reading messages from&#10;RabbitMQ" />
+    <option name="LAST_COMMIT_MESSAGE" value="We create a Node microservice. Reading messages from&#10;RabbitMQ" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/node/src/main/java/ru/phymat/service/impl/ConsumerServiceImpl.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/dispatcher/src/main/java/ru/phymat/service/impl/AnswerConsumerImpl.java</url>
-          <line>21</line>
+          <url>file://$PROJECT_DIR$/node/src/main/java/ru/phymat/service/impl/MainServiceImpl.java</url>
+          <line>22</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
